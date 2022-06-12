@@ -6,8 +6,8 @@ Tenim les taules producto i fabricador, cadascuna amb els següents camps:
 El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi' de l'entitat fabricante.
 Si us plau, efectua les siguentes consultes:
 
-1.Llista el nom de tots els productos que hi ha en la taula producto.
-2.Llista els noms i els preus de tots els productos de la taula producto.
+- Llista el nom de tots els productos que hi ha en la taula producto.
+- Llista els noms i els preus de tots els productos de la taula producto.
 Llista totes les columnes de la taula producto.
 Llista el nom dels productos, el preu en euros i el preu en dòlars estatunidencs (USD).
 Llista el nom dels productos, el preu en euros i el preu en dòlars estatunidencs (USD). Utilitza els següents àlies per a les columnes: nom de producto, euros, dolars.
