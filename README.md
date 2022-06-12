@@ -67,16 +67,15 @@ El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi
 - Retorna un llistat amb el nom de tots els departaments que tenen professors que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015).
 - Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019.
 
-### Resolgui les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
+### Resolgui les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN:
 
 - Retorna un llistat amb els noms de tots els professors i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom.
 - Retorna un llistat amb els professors que no estan associats a un departament.
 - Retorna un llistat amb els departaments que no tenen professors associats.
 - Retorna un llistat amb els professors que no imparteixen cap assignatura.
 - Retorna un llistat amb les assignatures que no tenen un professor assignat.
-
 - Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar.
-- 
+
 ### Consultes resum:
 
 - Retorna el nombre total d'alumnes que hi ha.
