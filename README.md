@@ -1,4 +1,4 @@
-#Base de dades Tienda
+# Base de dades TIENDA
 
 Tenim les taules producto i fabricador, cadascuna amb els següents camps:
 - producto (codigo, nombre, precio, codigo_fabricante)
@@ -8,7 +8,7 @@ Tenim les taules producto i fabricador, cadascuna amb els següents camps:
 El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi' de l'entitat fabricante.
 
 
-##Si us plau, efectua les siguentes consultes:
+## Si us plau, efectua les siguentes consultes:
 
 - Llista el nom de tots els productos que hi ha en la taula producto.
 - Llista els noms i els preus de tots els productos de la taula producto.
@@ -53,9 +53,9 @@ El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi
 - Llista tots els productes del fabricador Asus que tenen un preu superior al preu mitjà de tots els seus productes.
 
 
-#Base de dades Universidad
+# Base de dades UNIVERSIDAD
 
-##Si us plau, descàrrega la base de dades del fitxer schema_universidad.sql, visualitza el diagrama E-R en un editor i efectua les següents consultes:
+## Si us plau, descàrrega la base de dades del fitxer schema_universidad.sql, visualitza el diagrama E-R en un editor i efectua les següents consultes:
 
 - Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
 - Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
@@ -67,7 +67,7 @@ El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi
 - Retorna un llistat amb el nom de tots els departaments que tenen professors que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015).
 - Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019.
 
-###Resolgui les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
+### Resolgui les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
 
 - Retorna un llistat amb els noms de tots els professors i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom.
 - Retorna un llistat amb els professors que no estan associats a un departament.
@@ -77,7 +77,7 @@ El camp 'codigo_fabricante' de l'entitat producto es relaciona amb el camp 'codi
 
 - Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar.
 - 
-###Consultes resum:
+### Consultes resum:
 
 - Retorna el nombre total d'alumnes que hi ha.
 - Calcula quants alumnes van néixer en 1999.
