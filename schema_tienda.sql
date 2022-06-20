@@ -87,7 +87,7 @@ FROM
 -- 5.Llista el nom dels productos, el preu en euros i el preu en dòlars estatunidencs (USD).Utilitza els seg ü ents à lies per a les columnes: nom de producto,euros,dolars.
 
 SELECT
-    nombre AS 'nom del producto',
+    nombre AS 'Nombre del producto',
     precio AS 'euros',
     TRUNCATE((precio * 1.04), 2) AS 'dolars'
 FROM
@@ -96,16 +96,16 @@ FROM
 -- 6.Llista els noms i els preus de tots els productos de la taula producto,convertint els noms a maj ú scula.
 
 SELECT
-    UPPER(nombre) AS 'NOMBRE DEL PRODUCTO',
-    UPPER(precio) AS 'EUROS'
+    UPPER(nombre) AS 'Nombre del producto',
+    UPPER(precio) AS 'Euros'
 FROM
     producto;
 
 -- 7.Llista els noms i els preus de tots els productos de la taula producto,convertint els noms a minúscula.
 
 SELECT
-    LOWER(nombre) AS 'nombre del producto',
-    LOWER(precio) AS 'euros'
+    LOWER(nombre) AS 'Nombre del producto',
+    LOWER(precio) AS 'Euros'
 FROM
     producto;
 
@@ -116,16 +116,16 @@ SELECT nombre, LEFT(UPPER(nombre), 2) FROM FABRICANTE;
 -- 9.Llista els noms i els preus de tots els productos de la taula producto,arrodonint el valor del preu.
 
 SELECT
-    nombre AS 'NOMBRE DEL PRODUCTO',
-    ROUND(precio) AS 'EUROS'
+    nombre AS 'Nombre del producto',
+    ROUND(precio) AS 'Euros'
 FROM
     producto;
 
 -- 10.Llista els noms i els preus de tots els productos de la taula producto, truncant el valor del preu per a mostrar - lo sense cap xifra decimal.
 
 SELECT
-    nombre AS 'NOMBRE DEL PRODUCTO',
-    TRUNCATE(precio, 0) AS 'EUROS'
+    nombre AS 'Nombre del producto',
+    TRUNCATE(precio, 0) AS 'Euros'
 FROM
     producto;
 

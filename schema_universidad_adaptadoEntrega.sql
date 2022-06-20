@@ -1737,7 +1737,7 @@ INSERT INTO alumno_se_matricula_asignatura VALUES (19, 10, 5);
 
 -- QUERIES:
 
--- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
+-- Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
 
 SELECT
     persona.apellido1,
@@ -1752,7 +1752,7 @@ ORDER BY
     persona.apellido2,
     persona.nombre ASC;
 
--- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
+-- Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades.
 
 SELECT
     persona.nombre,
@@ -1764,7 +1764,7 @@ WHERE
     persona.tipo = 'alumno'
     AND persona.telefono IS NULL;
 
--- 3. Retorna el llistat dels alumnes que van néixer en 1999.
+-- Retorna el llistat dels alumnes que van néixer en 1999.
 
 SELECT
     *
@@ -1774,7 +1774,7 @@ WHERE
     tipo = 'alumno'
     and year(fecha_nacimiento) LIKE 1999;
 
--- 4. Retorna el llistat de professors que no han donat d'alta el seu número de telèfon en la base de dades i a més la seva nif acaba en K.
+-- Retorna el llistat de professors que no han donat d'alta el seu número de telèfon en la base de dades i a més la seva nif acaba en K.
 
 SELECT
     *
@@ -1785,7 +1785,7 @@ WHERE
     AND persona.telefono IS NULL
     AND persona.nif LIKE '%K';
 
--- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7.
+-- Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7.
 
 SELECT
     *
@@ -1796,7 +1796,7 @@ WHERE
     AND asignatura.curso = 3
     AND asignatura.id_grado = 7;
 
--- 6.Retorna un llistat dels professors juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels cognoms i el nom.
+-- Retorna un llistat dels professors juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels cognoms i el nom.
 
 SELECT
     persona.apellido1,
@@ -1812,7 +1812,7 @@ ORDER BY
     persona.apellido2,
     persona.nombre ASC;
 
--- 7. Retorna un llistat amb el nom de les assignatures, any d'inici i any de fi del curs escolar de l'alumne amb nif 26902806M.
+-- Retorna un llistat amb el nom de les assignatures, any d'inici i any de fi del curs escolar de l'alumne amb nif 26902806M.
 
 SELECT
     persona.nif,
@@ -1827,7 +1827,7 @@ FROM
 WHERE
     persona.nif LIKE '26902806M';
 
--- 8. Retorna un llistat amb el nom de tots els departaments que tenen professors que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015).
+-- Retorna un llistat amb el nom de tots els departaments que tenen professors que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015).
 
 SELECT
     DISTINCT departamento.nombre AS 'Nombre Departamento'
@@ -1839,7 +1839,7 @@ FROM
 WHERE
     grado.nombre LIKE 'Grado en Ingeniería Informática (Plan 2015)';
 
--- 9. Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019.
+-- Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019.
 
 SELECT
     DISTINCT persona.nombre,
@@ -1854,7 +1854,7 @@ WHERE
 
 -- LEFT JOIN:
 
--- 1. Retorna un llistat amb els noms de tots els professors i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom.
+-- Retorna un llistat amb els noms de tots els professors i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom.
 
 SELECT
     persona.apellido1,
@@ -1871,7 +1871,7 @@ ORDER BY
     persona.apellido2 ASC,
     persona.nombre ASC;
 
--- 2. Retorna un llistat amb els professors que no estan associats a un departament.
+-- Retorna un llistat amb els professors que no estan associats a un departament.
 
 SELECT
     persona.apellido1,
@@ -1884,7 +1884,7 @@ FROM
 WHERE
     departamento.id IS NULL;
 
--- 3. Retorna un llistat amb els departaments que no tenen professors associats.
+-- Retorna un llistat amb els departaments que no tenen professors associats.
 
 SELECT
     *
@@ -1894,7 +1894,7 @@ FROM
 WHERE
     profesor.id_departamento IS NULL;
 
--- 4. Retorna un llistat amb els professors que no imparteixen cap assignatura.
+-- Retorna un llistat amb els professors que no imparteixen cap assignatura.
 
 SELECT
     asignatura.nombre,
@@ -1909,7 +1909,7 @@ WHERE
     persona.tipo LIKE 'profesor'
     AND asignatura.id_profesor IS NULL;
 
--- 5. Retorna un llistat amb les assignatures que no tenen un professor assignat.
+-- Retorna un llistat amb les assignatures que no tenen un professor assignat.
 
 SELECT
     asignatura.nombre,
@@ -1923,7 +1923,7 @@ FROM
 WHERE
     asignatura.id_profesor IS NULL;
 
--- 6. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar.
+-- Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar.
 
 SELECT
     DISTINCT departamento.nombre
@@ -1939,7 +1939,7 @@ WHERE
 
 -- Consultes resum:
 
--- 1. Retorna el nombre total d'alumnes que hi ha.
+-- Retorna el nombre total d'alumnes que hi ha.
 
 SELECT
     count(persona.id) AS 'Total alumnos'
@@ -1948,7 +1948,7 @@ FROM
 WHERE
     persona.tipo LIKE 'alumno';
 
--- 2. Calcula quants alumnes van néixer en 1999.
+-- Calcula quants alumnes van néixer en 1999.
 
 SELECT
     count(persona.id) AS 'Nacidos en 1999'
@@ -1958,7 +1958,7 @@ WHERE
     persona.tipo LIKE 'alumno'
     AND year(fecha_nacimiento) LIKE 1999;
 
--- 3. Calcula quants professors hi ha en cada departament. El resultat només ha de mostrar dues columnes, una amb el nom del departament i una altra amb el nombre de professors que hi ha en aquest departament. El resultat només ha d'incloure els departaments que tenen professors associats i haurà d'estar ordenat de major a menor pel nombre de professors.
+-- Calcula quants professors hi ha en cada departament. El resultat només ha de mostrar dues columnes, una amb el nom del departament i una altra amb el nombre de professors que hi ha en aquest departament. El resultat només ha d'incloure els departaments que tenen professors associats i haurà d'estar ordenat de major a menor pel nombre de professors.
 
 SELECT
     departamento.nombre AS 'Departamento',
@@ -1971,7 +1971,7 @@ GROUP BY
 ORDER BY
     COUNT(profesor.id_profesor) DESC;
 
--- 4. Retorna un llistat amb tots els departaments i el nombre de professors que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors associats. Aquests departaments també han d'aparèixer en el llistat.
+-- Retorna un llistat amb tots els departaments i el nombre de professors que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors associats. Aquests departaments també han d'aparèixer en el llistat.
 
 SELECT
     departamento.nombre AS 'Departamento',
@@ -1984,7 +1984,7 @@ GROUP BY
 ORDER BY
     COUNT(profesor.id_profesor) DESC;
 
--- 5. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingui en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures.
+-- Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingui en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures.
 
 SELECT
     grado.nombre,
@@ -1997,7 +1997,7 @@ GROUP BY
 ORDER BY
     COUNT(asignatura.id) DESC;
 
--- 6. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun, dels graus que tinguin més de 40 assignatures associades.
+-- Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun, dels graus que tinguin més de 40 assignatures associades.
 
 SELECT
     grado.nombre,
@@ -2010,7 +2010,7 @@ GROUP BY
 HAVING
     total_asignaturas > 40;
 
--- 7. Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits que hi ha per a cada tipus d'assignatura. El resultat ha de tenir tres columnes: nom del grau, tipus d'assignatura i la suma dels crèdits de totes les assignatures que hi ha d'aquest tipus.
+-- Retorna un llistat que mostri el nom dels graus i la suma del nombre total de crèdits que hi ha per a cada tipus d'assignatura. El resultat ha de tenir tres columnes: nom del grau, tipus d'assignatura i la suma dels crèdits de totes les assignatures que hi ha d'aquest tipus.
 
 SELECT
     grado.nombre,
@@ -2023,7 +2023,7 @@ GROUP BY
     grado.nombre,
     asignatura.tipo;
 
--- 8. Retorna un llistat que mostri quants alumnes s'han matriculat d'alguna assignatura en cadascun dels cursos escolars. El resultat haurà de mostrar dues columnes, una columna amb l'any d'inici del curs escolar i una altra amb el nombre d'alumnes matriculats.
+-- Retorna un llistat que mostri quants alumnes s'han matriculat d'alguna assignatura en cadascun dels cursos escolars. El resultat haurà de mostrar dues columnes, una columna amb l'any d'inici del curs escolar i una altra amb el nombre d'alumnes matriculats.
 
 SELECT
     curso_escolar.anyo_inicio,
@@ -2034,7 +2034,7 @@ FROM
 GROUP BY
     curso_escolar.anyo_inicio;
 
--- 9. Retorna un llistat amb el nombre d'assignatures que imparteix cada professor. El llistat ha de tenir en compte aquells professors que no imparteixen cap assignatura. El resultat mostrarà cinc columnes: id, nom, primer cognom, segon cognom i nombre d'assignatures. El resultat estarà ordenat de major a menor pel nombre d'assignatures.
+-- Retorna un llistat amb el nombre d'assignatures que imparteix cada professor. El llistat ha de tenir en compte aquells professors que no imparteixen cap assignatura. El resultat mostrarà cinc columnes: id, nom, primer cognom, segon cognom i nombre d'assignatures. El resultat estarà ordenat de major a menor pel nombre d'assignatures.
 
 SELECT
     persona.id,
@@ -2052,7 +2052,7 @@ GROUP BY
 ORDER BY
     COUNT(asignatura.id_profesor) DESC;
 
--- 10. Retorna totes les dades de l'alumne més jove.
+-- Retorna totes les dades de l'alumne més jove.
 
 SELECT
     *
@@ -2069,7 +2069,7 @@ WHERE
             persona.tipo = 'alumno'
     );
 
--- 11. Retorna un llistat amb els professors que tenen un departament associat i que no imparteixen cap assignatura.
+-- Retorna un llistat amb els professors que tenen un departament associat i que no imparteixen cap assignatura.
 
 SELECT
     persona.apellido1,
