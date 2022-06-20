@@ -2083,4 +2083,4 @@ FROM
     INNER JOIN departamento ON departamento.id = profesor.id_departamento
     LEFT JOIN asignatura ON asignatura.id_profesor = profesor.id_profesor
 WHERE
-    asignatura.nombre IS NULL
+    asignatura.nombre IS NULL;
